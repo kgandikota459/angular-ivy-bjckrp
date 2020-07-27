@@ -1,14 +1,16 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Private Equity
-</p>
-<div id="container">
-  <div id="content">
-    <div style="width: 80%; margin-left: auto; margin-right: auto;">
-      Lots of placeholder text here so we ample vertical scroll to play with....
-    </div>
-  </div>
-</div>
+<h1> Discount Cash Flow Calculator</h1>
+<h2>Input the following quantities</h2>
+<h3>Market Value of Debt</h3><input type="number" name="mvd" [(ngModel)]="mvd">
+<h3>Market Value of Equity</h3><input type="number" name="mve" [(ngModel)]="mve">
+<h3>Corporate Tax Rate</h3><input type="number" name="ctr" [(ngModel)]="ctr">
+<h3>Cost of Equity</h3><input type="number" name="ce" [(ngModel)]="ce">
+<h3>Cost of Debt</h3><input type="number" name="cd" [(ngModel)]="cd">
+<h3>EBIT</h3><input type="number" name="ebit" [(ngModel)]="ebit">
+<h3>Amount of Depreciation</h3><input type="number" name="amd" [(ngModel)]="amd">
+<h3>Amount of Amortization</h3><input type="number" name="ama" [(ngModel)]="ama">
+<h3>Amount of Capital Expenditures</h3><input type="number" name="capEx" [(ngModel)]="capEx">
+<h3>EBITDA Multiple</h3><input type="number" name="ebitda" [(ngModel)]="ebitda">
+<br><br><button (click)="dcfCalc()">SUBMIT</button>
+<br><br><h2>Your Final Valuation for this company is: {{finalValue}}</h2>
+<br><h3>BREAKDOWN: &nbsp;&nbsp;&nbsp; Year 1: {{y1}} &nbsp;&nbsp;&nbsp; Year 2: {{y2}} &nbsp;&nbsp;&nbsp; Year 3: {{y3}} &nbsp;&nbsp;&nbsp; Year 4: {{y4}} &nbsp;&nbsp;&nbsp; Year 5: {{y5}} &nbsp;&nbsp;&nbsp;</h3>
 
-<!-- our parallax stuff -->
-<div appParallax [ratio]="-0.2" id="square"></div>

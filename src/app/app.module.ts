@@ -4,10 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
+import { ParallaxDirective } from './parallax.directive';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, ],
+  declarations: [ AppComponent, HelloComponent, ParallaxDirective, ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

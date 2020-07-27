@@ -34,3 +34,7 @@ input[type=number]
     height: 25px;
     background-color: green;
 }
+
+.summary{
+  background-color: green
+}

@@ -8,6 +8,7 @@ import { Component, VERSION } from '@angular/core';
 
 export class AppComponent  {
   
+  public name:string;
   public mvd:number;
   public mve:number;
   public ctr:number;
@@ -38,5 +39,4 @@ export class AppComponent  {
     this.finalValue=(this.y1)+(this.y2)+(this.y3)+(this.y4)+(this.y5);
   }
 
-  name = 'Angular ' + VERSION.major;
 }

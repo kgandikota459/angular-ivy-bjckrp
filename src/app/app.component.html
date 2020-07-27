@@ -7,8 +7,8 @@
 </div>
 
 <!-- our parallax stuff -->
-<div appParallax [ratio]="-0.06" id="top"></div>
-<div appParallax [ratio]="0.6" id="bottom"></div>
+<div appParallax [ratio]="-0.033" id="top"></div>
+<div appParallax [ratio]="0.61" id="bottom"></div>
 
 
 
@@ -18,10 +18,11 @@
 
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <h1> Discount Cash Flow Calculator</h1>
 <br>
-<h2>Input the following quantities</h2>
+<h2>Input the following</h2>
+<h3>Name of Company</h3><input type="string" name="name" [(ngModel)]="name">
 <h3>Market Value of Debt</h3><input type="number" name="mvd" [(ngModel)]="mvd">
 <h3>Market Value of Equity</h3><input type="number" name="mve" [(ngModel)]="mve">
 <h3>Corporate Tax Rate</h3><input type="number" name="ctr" [(ngModel)]="ctr">
@@ -33,6 +34,8 @@
 <h3>Amount of Capital Expenditures</h3><input type="number" name="capEx" [(ngModel)]="capEx">
 <h3>EBITDA Multiple</h3><input type="number" name="ebitda" [(ngModel)]="ebitda">
 <br><br><button (click)="dcfCalc()"><h3>SUBMIT</h3></button>
-<br><br><h2>Your Final Valuation for this company is: {{finalValue}}</h2>
-<br><h3>BREAKDOWN: &nbsp;&nbsp;&nbsp; Year 1: {{y1}} &nbsp;&nbsp;&nbsp; Year 2: {{y2}} &nbsp;&nbsp;&nbsp; Year 3: {{y3}} &nbsp;&nbsp;&nbsp; Year 4: {{y4}} &nbsp;&nbsp;&nbsp; Year 5: {{y5}} &nbsp;&nbsp;&nbsp;</h3>
+<div id=summary>
+<br><br><h2>Your Final Valuation for {{name}} is: {{finalValue}}</h2>
+<h3>BREAKDOWN: &nbsp;&nbsp;&nbsp; Year 1: {{y1}} &nbsp;&nbsp;&nbsp; Year 2: {{y2}} &nbsp;&nbsp;&nbsp; Year 3: {{y3}} &nbsp;&nbsp;&nbsp; Year 4: {{y4}} &nbsp;&nbsp;&nbsp; Year 5: {{y5}} &nbsp;&nbsp;&nbsp;</h3>
+</div>
 

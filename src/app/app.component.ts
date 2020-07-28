@@ -38,5 +38,6 @@ export class AppComponent  {
     this.y5=(this.cashFlow*this.ebitda)/((1+this.wacc)*(1+this.wacc)*(1+this.wacc)*(1+this.wacc)*(1+this.wacc));
     this.finalValue=(this.y1)+(this.y2)+(this.y3)+(this.y4)+(this.y5);
   }
+  
 
 }

@@ -20,7 +20,7 @@ input[type=number]
     z-index: -1;
     top: 0px; 
     left: 0px;
-    width: 1250px;
+    width: 4000px;
     height: 25px;
     background-color: green;
 }
@@ -30,7 +30,7 @@ input[type=number]
     z-index: 1;
     bottom: 0px; 
     left: 0px;
-    width: 1250px;
+    width: 4000px;
     height: 25px;
     background-color: green;
 }

@@ -1,4 +1,6 @@
 import { Component, VERSION } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { ConfigService } from './config.service';
 
 @Component({
   selector: 'my-app',
@@ -8,6 +10,10 @@ import { Component, VERSION } from '@angular/core';
 
 export class AppComponent  {
   
+  constructor(private http: HttpClient){
+
+  }
+
   public name:string;
   public mvd:number;
   public mve:number;
@@ -27,6 +33,21 @@ export class AppComponent  {
   public y4:number;
   public y5:number;
   public finalValue:number;
+  public ticker:string = "";
+  public response:any;
+
+  search() {
+    let obs = this.http.get('https://financialmodelingprep.com/api/v3/profile/' + this.ticker + '?apikey=368129475084ccd62b8902c798789a3a')
+    obs.subscribe((response) => { 
+      this.response = response;
+      console.log(this.response);
+    })
+  }
+
+  ngOnInit() {
+    let obs = this.http.get('https://financialmodelingprep.com/api/v3/profile/AAPL?apikey=368129475084ccd62b8902c798789a3a')
+    obs.subscribe((response) => console.log(response))
+  }
 
   dcfCalc(){
     this.wacc=((this.mvd/(this.mve+this.mvd)*this.cd*(1-this.ctr))+(this.mve/(this.mve+this.mvd)*this.ce));

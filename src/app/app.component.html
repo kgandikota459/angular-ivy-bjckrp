@@ -7,18 +7,15 @@
 </div>
 
 <!-- our parallax stuff -->
-<div appParallax [ratio]="-0.033" id="top"></div>
+<!--<div appParallax [ratio]="-0.033" id="top"></div>
 <div appParallax [ratio]="0.61" id="bottom"></div>
-
-
-
-
-
-
-
+-->
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h1> Input the company ticker for the financial Information </h1><input type="text" [(ngModel)]="ticker">
+<button (click)="search()"><h5>Search</h5></button>
+{{response}}
 <h1> Discount Cash Flow Calculator</h1>
 <br>
 <h2>Input the following</h2>
